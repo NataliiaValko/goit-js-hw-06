@@ -4,7 +4,7 @@ const valueRef = document.querySelector('#value')
 
 let counterValue = 0
 
-const updateValueUI = () => (valueRef.textContent = counterInitialValue)
+const updateValueUI = () => (valueRef.textContent = counterValue)
 
 const incrementBtnHandler = () => {
   counterValue += 1
