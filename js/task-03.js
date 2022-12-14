@@ -18,19 +18,13 @@ const listImagesRef = document.querySelector('.gallery')
 const makeItemsGallery = (array) =>
   array
     .map(({ url, alt }) => {
-      return `<li><img src="${url}" alt="${alt}"></li>`
+      return `<li class="js-gallery__item"><img src="${url}" alt="${alt}"></li>`
     })
     .join('')
 
 const insertGallery = (array) => {
   listImagesRef.insertAdjacentHTML('afterbegin', makeItemsGallery(array))
   listImagesRef.classList.add('list', 'js-gallery__list')
-
-  // ========adds class for styles========
-  listImagesRef
-    .querySelectorAll('li')
-    .forEach((item) => item.classList.add('js-gallery__item'))
-  // ===
 }
 
 insertGallery(images)
