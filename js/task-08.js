@@ -1,12 +1,5 @@
 const formRef = document.querySelector('.login-form')
 
-class Form {
-  constructor(name, password) {
-    this.name = name
-    this.password = password
-  }
-}
-
 const formSubmitHandler = (event) => {
   event.preventDefault()
   const {
@@ -18,7 +11,7 @@ const formSubmitHandler = (event) => {
     alert(`All the fields should be completed ;-)`)
     return
   }
-  const dataForm = new Form(emailValue, passwordValue)
+  const dataForm = { name: emailValue, password: passwordValue }
   console.log(dataForm)
   formRef.reset()
 }

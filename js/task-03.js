@@ -24,7 +24,6 @@ const makeItemsGallery = (array) =>
 
 const insertGallery = (array) => {
   listImagesRef.insertAdjacentHTML('afterbegin', makeItemsGallery(array))
-  listImagesRef.classList.add('list', 'js-gallery__list')
 }
 
 insertGallery(images)
